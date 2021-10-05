@@ -1,6 +1,5 @@
 package com.lab03.visitadoresmedicos
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -36,7 +35,7 @@ class VisitActivity : AppCompatActivity() {
     }
 
     fun registrarDatos(view: View) {
-        // Indica al usuario que campos corregir (ingresar numeros)
+        // Indica al usuario que campos corregir (si existe alguno)
         val camposACorregir = StringBuilder()
 
         val dni = recuperarTexto(R.id.dni_id)
@@ -54,10 +53,10 @@ class VisitActivity : AppCompatActivity() {
         }
 
         val visita = Visita(dni, presion, temperatura, saturacion)
-        RegistroVisitas.visitas.add(visita)
+        Almacen.visitas.add(visita)
 
         Log.d("VISIT_ACTIVITY", "Pacientes registrados:")
-        for (v in RegistroVisitas.visitas) {
+        for (v in Almacen.visitas) {
             Log.d("VISIT_ACTIVITY", v.toString())
         }
 
