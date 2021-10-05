@@ -14,6 +14,11 @@ class VisitActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visit)
+
+        // Recuperar DNI del intent e insertarlo
+        val dni = intent.getStringExtra("DNI") ?: ""
+        val editTextDni = findViewById<EditText>(R.id.dni_id)
+        editTextDni.text.insert(0, dni)
     }
 
     private fun recuperarTexto(id: Int): String = findViewById<EditText>(id).text.toString()

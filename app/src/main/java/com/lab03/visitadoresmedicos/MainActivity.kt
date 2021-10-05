@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     fun irAVisita(view: View) {
         val i = Intent(this, VisitActivity::class.java)
+        i.putExtra("DNI", Almacen.paciente?.dni ?: "")
         startActivity(i)
     }
 
