@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                 Apellidos: ${paciente.apellidos}
                 Nombres: ${paciente.nombres}
                 Dirección: ${paciente.direccion}
-                Correo: ${paciente.nombres}
+                Correo: ${paciente.correo}
                 
                 Visitas:
             """.trimIndent()
