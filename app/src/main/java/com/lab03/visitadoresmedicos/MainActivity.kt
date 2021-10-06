@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +23,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(i)
     }
 
-    private val irAActivity = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+    private val irAActivity = registerForActivityResult(ActivityResultContracts.StartActivityForResult())
+    { result ->
         val intent = result.data ?: return@registerForActivityResult
         // Recuperar datos de la actividad Paciente
         if (result.resultCode == Activity.RESULT_OK) {
@@ -31,6 +33,11 @@ class MainActivity : AppCompatActivity() {
             val nombre = intent.getStringExtra("Nombre")!!
             val direccion = intent.getStringExtra("Direccion")!!
             val correo = intent.getStringExtra("Correo")!!
+
+            // Mostrar en el menú principal
+            val textView = findViewById<TextView>(R.id.datosPaciente)
+            textView.text = "Datos del paciente:\nDni: $dni\nApellidos: $apellidos\n" +
+                    "Nombres: $nombre\nDireccion: $direccion\nCorreo: $correo"
 
             val paciente = Paciente(dni, apellidos, nombre, direccion, correo)
             Almacen.paciente = paciente

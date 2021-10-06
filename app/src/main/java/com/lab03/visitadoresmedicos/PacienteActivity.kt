@@ -18,8 +18,6 @@ class PacienteActivity : AppCompatActivity() {
     private fun recuperarTexto(id: Int): String = findViewById<EditText>(id).text.toString()
 
     fun registrarPaciente(view: View) {
-        Log.d("PACIENTE", "Presionado boton")
-
         // Devolver datos a MainActivity
         val returnIntent = Intent()
         returnIntent.putExtra("Dni", recuperarTexto(R.id.editTextDni))
