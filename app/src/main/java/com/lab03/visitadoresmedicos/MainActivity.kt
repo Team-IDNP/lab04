@@ -55,6 +55,21 @@ class MainActivity : AppCompatActivity() {
             data = Uri.parse("mailto:")
             putExtra(Intent.EXTRA_EMAIL, arrayOf(Almacen.paciente?.correo))
             putExtra(Intent.EXTRA_SUBJECT, "Registro de visita")
+            val paciente = Almacen.paciente!!
+            var informacion = """
+                Datos del paciente:
+                Dni: ${paciente.dni}
+                Apellidos: ${paciente.apellidos}
+                Nombres: ${paciente.nombres}
+                Dirección: ${paciente.direccion}
+                Correo: ${paciente.nombres}
+                
+                Visitas:
+            """.trimIndent()
+            for (visita in Almacen.visitas) {
+                informacion += "\n${visita}"
+            }
+            putExtra(Intent.EXTRA_TEXT, informacion)
         }
         startActivity(intent)
     }
