@@ -2,6 +2,7 @@ package com.lab03.visitadoresmedicos
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -40,6 +41,15 @@ class MainActivity : AppCompatActivity() {
     fun irARegistrarPaciente(view: View) {
         val intent = Intent(this, PacienteActivity::class.java)
         irAActivity.launch(intent)
+    }
+
+    fun enviarCorreoAPaciente(view: View) {
+        val intent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, arrayOf(Almacen.paciente?.correo))
+            putExtra(Intent.EXTRA_SUBJECT, "Registro de visita")
+        }
+        startActivity(intent)
     }
 
 }
