@@ -6,12 +6,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.BindingAdapter
+
+import com.lab04.visitadoresmedicos.databinding.ActivityPacienteBinding
 
 class PacienteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_paciente)
+
+        // val activityMainBinding = DataBindingUtil.setContentView<ActivityPacienteBinding>(this, R.layout.activity_paciente)
+        // TODO: todo esto se coloca luego de establecer las variables en el layout
+        // activityMainBinding.setViewModel()
     }
 
     private fun recuperarTexto(id: Int): String = findViewById<EditText>(id).text.toString()
