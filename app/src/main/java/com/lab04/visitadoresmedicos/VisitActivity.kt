@@ -1,4 +1,4 @@
-package com.lab03.visitadoresmedicos
+package com.lab04.visitadoresmedicos
 
 import android.os.Bundle
 import android.util.Log
@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.lab04.visitadoresmedicos.Model.Visita
 import java.lang.NumberFormatException
 import java.lang.StringBuilder
 
