@@ -1,4 +1,4 @@
-package com.lab03.visitadoresmedicos
+package com.lab04.visitadoresmedicos.Model
 
 data class Paciente(
     val dni: String,

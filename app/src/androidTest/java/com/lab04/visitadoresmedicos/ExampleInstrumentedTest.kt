@@ -1,4 +1,4 @@
-package com.lab03.visitadoresmedicos
+package com.lab04.visitadoresmedicos
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

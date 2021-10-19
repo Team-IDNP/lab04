@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lab03.visitadoresmedicos">
+    package="com.lab04.visitadoresmedicos">
 
     <application
         android:allowBackup="true"
@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VisitadoresMedicos">
         <activity
-            android:name=".PacienteActivity"
+            android:name="com.lab04.visitadoresmedicos.PacienteActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.lab04.visitadoresmedicos.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".VisitActivity"
+            android:name="com.lab04.visitadoresmedicos.VisitActivity"
             android:exported="true" />
     </application>
 
