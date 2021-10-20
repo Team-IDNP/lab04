@@ -12,7 +12,7 @@ import androidx.databinding.BindingAdapter
 
 import com.lab04.visitadoresmedicos.databinding.ActivityPacienteBinding
 
-class PacienteActivity : AppCompatActivity() {
+open class PacienteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

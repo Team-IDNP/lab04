@@ -1,11 +1,11 @@
-package com.lab04.visitadoresmedicos.Model
+package com.lab04.visitadoresmedicos.model
 
 data class Paciente(
-    private var dni: String,
-    private var apellidos: String,
-    private var nombres: String,
-    private var direccion: String,
-    private var correo: String,
+    private var dni: String = "",
+    private var apellidos: String = "",
+    private var nombres: String = "",
+    private var direccion: String = "",
+    private var correo: String = "",
 ) {
 
     fun getDni(): String = dni

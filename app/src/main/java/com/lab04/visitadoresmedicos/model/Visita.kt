@@ -1,4 +1,4 @@
-package com.lab04.visitadoresmedicos.Model
+package com.lab04.visitadoresmedicos.model
 
 class Visita(
     private var dni: String,

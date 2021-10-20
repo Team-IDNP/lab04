@@ -1,10 +1,10 @@
-package com.lab04.visitadoresmedicos.ViewModel
+package com.lab04.visitadoresmedicos.viewmodel
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
-import com.lab04.visitadoresmedicos.Model.Visita
+import com.lab04.visitadoresmedicos.model.Visita
 
-class VisitaViewModel(private val visita: Visita) : BaseObservable() {
+open class VisitaViewModel(private val visita: Visita) : BaseObservable() {
 
     @Bindable
     fun getDni() = visita.getDni()

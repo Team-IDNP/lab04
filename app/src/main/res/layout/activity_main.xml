@@ -2,11 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
 
-        <!--<variable
+        <variable
             name="viewModel"
-            type="com.lab04.visitadoresmedicos.Model.MainViewModel" />-->
+            type="com.lab04.visitadoresmedicos.viewmodel.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +20,7 @@
             android:layout_width="277dp"
             android:layout_height="188dp"
             android:layout_marginTop="60dp"
-            android:text="@={viewModel.mostrarDatos}"
+            android:text="@={viewModel.datos}"
             app:layout_constraintBottom_toTopOf="@+id/enviarCorreo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -33,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:onClick="irARegistrarPaciente"
+            android:onClick="@{() -> viewModel.irARegistrarPaciente()}"
             android:text="Registrar Paciente"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:onClick="irAVisita"
+            android:onClick="@{() -> viewModel.irAVisita()}"
             android:text="Registrar Visita"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="76dp"
-            android:onClick="enviarCorreoAPaciente"
+            android:onClick="@{() -> viewModel.enviarCorreoAPaciente()}"
             android:text="Enviar Correo a Paciente"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

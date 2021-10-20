@@ -6,11 +6,11 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.lab04.visitadoresmedicos.Model.Visita
+import com.lab04.visitadoresmedicos.model.Visita
 import java.lang.NumberFormatException
 import java.lang.StringBuilder
 
-class VisitActivity : AppCompatActivity() {
+open class VisitActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

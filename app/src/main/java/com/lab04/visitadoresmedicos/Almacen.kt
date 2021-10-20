@@ -1,7 +1,7 @@
 package com.lab04.visitadoresmedicos
 
-import com.lab04.visitadoresmedicos.Model.Paciente
-import com.lab04.visitadoresmedicos.Model.Visita
+import com.lab04.visitadoresmedicos.model.Paciente
+import com.lab04.visitadoresmedicos.model.Visita
 
 object Almacen {
     var paciente: Paciente? = null
