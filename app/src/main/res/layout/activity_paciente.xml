@@ -4,7 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable name="dni" type="String"/>
+        <variable name="apellidos" type="String"/>
+        <variable name="nombres" type="String"/>
+        <variable name="direccion" type="String"/>
+        <variable name="correo" type="String"/>
 
+        <variable
+            name="viewModel"
+            type="com.lab04.visitadoresmedicos.Model.Paciente" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="DNI"
+                    android:text="@{viewModel.dni}"
                     android:inputType="numberSigned"
                     android:minHeight="48dp"
                     android:paddingBottom="20dp" />
@@ -54,6 +63,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Apellidos"
+                    android:text="@{viewModel.apellidos}"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
                     android:paddingBottom="20dp"
@@ -65,6 +75,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Nombres"
+                    android:text="@{viewModel.nombres}"
                     android:inputType="text"
                     android:minHeight="48dp"
                     android:paddingBottom="20dp" />
@@ -75,6 +86,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Dirección"
+                    android:text="@{viewModel.direccion}"
                     android:inputType="text"
                     android:minHeight="48dp"
                     android:paddingBottom="20dp" />
@@ -85,6 +97,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Correo electrónico"
+                    android:text="@{viewModel.correo}"
                     android:inputType="textEmailAddress"
                     android:minHeight="48dp"
                     android:paddingBottom="20dp" />

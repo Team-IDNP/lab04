@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
 
-        <variable
+        <!--<variable
             name="viewModel"
-            type="com.lab03.visitadoresmedicos.viewmodels.MainViewModel" />
+            type="com.lab04.visitadoresmedicos.Model.MainViewModel" />-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
