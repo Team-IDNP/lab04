@@ -2,6 +2,8 @@
 
 Este repositorio contiene el código fuente desarrollado durante la práctica de laboratorio 04 del curso de 
 Introducción al Desarrollo de Nuevas Plataformas de la Universidad Nacional de San Agustin.
+Link de video --> https://drive.google.com/file/d/1AC1VLTdWzjKaevGpJOBjFCypTF4JYyMD/view?usp=sharing
+
 
 ## Integrantes
 
