@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.lab04.visitadoresmedicos.viewmodel.VisitaViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,6 +23,7 @@
             android:layout_marginStart="15dp"
             android:ems="10"
             android:hint="Nivel de Saturacion"
+            android:text="@={viewModel.saturacion}"
             android:inputType="textPersonName"
             android:textColorHighlight="#673AB7"
             android:textColorLink="#673AB7"
@@ -44,6 +48,7 @@
             android:layout_marginStart="15dp"
             android:ems="10"
             android:hint="Temperatura"
+            android:text="@={viewModel.temperatura}"
             android:inputType="textPersonName"
             android:textColorHighlight="#673AB7"
             android:textColorLink="#673AB7"
@@ -68,6 +73,7 @@
             android:layout_marginStart="15dp"
             android:ems="10"
             android:hint="Presion"
+            android:text="@={viewModel.presion}"
             android:inputType="textPersonName"
             android:textColorHighlight="#673AB7"
             android:textColorLink="#673AB7"
@@ -103,6 +109,7 @@
             android:layout_marginStart="15dp"
             android:ems="10"
             android:hint="DNI"
+            android:text="@={viewModel.dni}"
             android:inputType="textPersonName"
             android:textColorHighlight="#673AB7"
             android:textColorLink="#673AB7"
@@ -126,7 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:onClick="registrarDatos"
+            android:onClick="@{() -> viewModel.registrarDatos()}"
             android:text="@string/registrar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
