@@ -12,7 +12,7 @@
 
         <variable
             name="viewModel"
-            type="com.lab04.visitadoresmedicos.model.Paciente" />
+            type="com.lab04.visitadoresmedicos.viewmodel.PacienteViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="DNI"
-                    android:text="@{viewModel.dni}"
+                    android:text="@={viewModel.dni}"
                     android:inputType="numberSigned"
                     android:minHeight="48dp"
                     android:paddingBottom="20dp" />
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Apellidos"
-                    android:text="@{viewModel.apellidos}"
+                    android:text="@={viewModel.apellidos}"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
                     android:paddingBottom="20dp"
@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Nombres"
-                    android:text="@{viewModel.nombres}"
+                    android:text="@={viewModel.nombres}"
                     android:inputType="text"
                     android:minHeight="48dp"
                     android:paddingBottom="20dp" />
@@ -86,7 +86,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Dirección"
-                    android:text="@{viewModel.direccion}"
+                    android:text="@={viewModel.direccion}"
                     android:inputType="text"
                     android:minHeight="48dp"
                     android:paddingBottom="20dp" />
@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Correo electrónico"
-                    android:text="@{viewModel.correo}"
+                    android:text="@={viewModel.correo}"
                     android:inputType="textEmailAddress"
                     android:minHeight="48dp"
                     android:paddingBottom="20dp" />
@@ -107,7 +107,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:onClick="registrarPaciente"
+                    android:onClick="@{() -> viewModel.registrarPaciente()}"
                     android:text="Registrar"
                     android:textSize="16sp" />
 

@@ -10,6 +10,7 @@ import com.lab04.visitadoresmedicos.Almacen
 import com.lab04.visitadoresmedicos.model.MainModel
 import com.lab04.visitadoresmedicos.PacienteActivity
 import com.lab04.visitadoresmedicos.VisitActivity
+import com.lab04.visitadoresmedicos.BR
 
 open class MainViewModel(
     private val context: Context,
@@ -20,9 +21,9 @@ open class MainViewModel(
 
     @Bindable
     fun getDatos() = mainModel.getDatosPaciente()
-
     fun setDatos(datos: String) {
         mainModel.setDatosPaciente(datos)
+        notifyPropertyChanged(BR.datos)
     }
 
     fun irAVisita() {
